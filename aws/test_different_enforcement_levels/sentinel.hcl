@@ -11,7 +11,7 @@ module "tfconfig-functions" {
 }
 
 module "aws-functions" {
-  source = "../../aws-functions/aws-functions.sentinel"
+  source = "../aws-functions/aws-functions.sentinel"
 }
 
 policy "check-ec2-environment-tag" {
