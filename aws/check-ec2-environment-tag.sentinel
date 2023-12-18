@@ -6,12 +6,11 @@
 # with alias "plan"
 import "tfplan-functions" as plan
 
+# Parameter for allowed environments
+param allowed_environments default ["dev", "qa", "prod"]
+
 # Mandatory tags
 mandatory_tags = ["Environment"]
-
-# Allowed Environments
-# Include "null" to allow missing or computed values
-allowed_environments = ["dev", "qa", "prod"]
 
 # Get all EC2 instances
 allEC2Instances = plan.find_resources("aws_instance")
